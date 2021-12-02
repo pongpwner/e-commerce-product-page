@@ -1,0 +1,31 @@
+.item-description {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem;
+  align-items: flex-start;
+
+  .item-brand {
+    font-weight: 700;
+    color: hsl(26, 100%, 55%);
+    font-size: 0.8rem;
+    margin: 0;
+  }
+  .item-name {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    word-wrap: break-word;
+    word-break: keep-all;
+    text-align-last: left;
+    text-align: start;
+    margin: 0;
+  }
+  .description {
+    margin: 1rem 0;
+    padding: 0;
+    text-align: start;
+    color: hsl(219, 9%, 45%);
+  }
+}

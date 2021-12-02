@@ -1,0 +1,17 @@
+.custom-button {
+  background-color: hsl(26, 100%, 55%);
+  border: none;
+  color: white;
+  padding: 1rem;
+  width: 90%;
+  margin: 0 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .button-icon {
+    margin-right: 1rem;
+  }
+}
