@@ -20,7 +20,6 @@ const ItemPage = () => {
   ]);
   return (
     <div className="itemPage">
-      <Header />
       <ImageHolder images={images} setImages={setImages} />
       <ItemDescription />
       <ItemQuantity />

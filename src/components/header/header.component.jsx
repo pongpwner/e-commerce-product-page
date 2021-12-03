@@ -4,7 +4,7 @@ import logo from "../../images/logo.svg";
 import cart from "../../images/icon-cart.svg";
 import avatar from "../../images/image-avatar.png";
 
-const Header = () => {
+const Header = ({ toggleCart }) => {
   const [hidden, setHidden] = useState(true);
 
   const toggleHidden = () => {
@@ -41,7 +41,9 @@ const Header = () => {
           </li>
         </ul>
         <span className="header-group group2">
-          <img src={cart} alt="cart" className="icon header-item"></img>
+          <button type="button" onClick={toggleCart}>
+            <img src={cart} alt="cart" className="icon header-item"></img>
+          </button>
           <img src={avatar} alt="avatar" className="icon header-item"></img>
         </span>
       </div>
