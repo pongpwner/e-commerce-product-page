@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./item.styles.scss";
 import Header from "../components/header/header.component";
 import ImageHolder from "../components/image-holder/image-holder.component";
@@ -12,16 +12,16 @@ import item4 from "../images/image-product-4.jpg";
 import cart from "../images/icon-cart.svg";
 
 const ItemPage = () => {
-  const images = [
-    { image: item1, description: "product" },
-    { image: item2, description: "product" },
-    { image: item3, description: "product" },
-    { image: item4, description: "product" },
-  ];
+  const [images, setImages] = useState([
+    { image: item1, description: "product", display: false },
+    { image: item2, description: "product", display: false },
+    { image: item3, description: "product", display: false },
+    { image: item4, description: "product", display: false },
+  ]);
   return (
     <div className="itemPage">
       <Header />
-      <ImageHolder images={images} />
+      <ImageHolder images={images} setImages={setImages} />
       <ItemDescription />
       <ItemQuantity />
       <CustomButton type="button" image={cart} label="Add To Cart" />
