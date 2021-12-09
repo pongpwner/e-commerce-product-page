@@ -10,14 +10,23 @@ import item2 from "../images/image-product-2.jpg";
 import item3 from "../images/image-product-3.jpg";
 import item4 from "../images/image-product-4.jpg";
 import cart from "../images/icon-cart.svg";
+import CartDropdown from "../components/cart/cart-dropdown.component";
 
-const ItemPage = () => {
+const ItemPage = ({
+  cartItems,
+  setCartItems,
+  cartQuantity,
+  setCartQuantity,
+  quantity,
+  setQuantity,
+}) => {
   const itemDetails = {
+    id: 0,
     brand: "Sneaker Company",
     itemName: "Fall Limited Edition Sneakers",
     description:
       "These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.",
-    price: "$125.00",
+    price: "125.00",
     discount: "50%",
     ogPrice: "$250.00",
     images: [
@@ -27,9 +36,18 @@ const ItemPage = () => {
       { image: item4, description: "product", display: false },
     ],
   };
-  const [cartItems, setCartItems] = useState([]);
 
-  const addToCart = () => {};
+  const addToCart = (item) => {
+    // if(cartItems.find(item.id)){
+    //   setCartItems((prev) => {
+    //     return [...prev, item];
+    //   });
+    // }
+    setCartItems((prev) => {
+      return [item];
+    });
+    setCartQuantity((prev) => prev + quantity);
+  };
   return (
     <div className="itemPage">
       <ImageHolder itemImages={itemDetails.images} />
@@ -41,12 +59,12 @@ const ItemPage = () => {
         discount={itemDetails.discount}
         ogPrice={itemDetails.ogPrice}
       />
-      <ItemQuantity />
+      <ItemQuantity quantity={quantity} setQuantity={setQuantity} />
       <CustomButton
         type="button"
         image={cart}
         label="Add To Cart"
-        handleClick={addToCart}
+        handleClick={() => addToCart(itemDetails)}
       />
     </div>
   );

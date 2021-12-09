@@ -3,9 +3,28 @@ import "./item-quantity.styles.scss";
 import plus from "../../images/icon-plus.svg";
 import minus from "../../images/icon-minus.svg";
 
-const ItemQuantity = () => (
+const ItemQuantity = ({ quantity, setQuantity }) => (
   <div className="item-quantity">
-    <img src={minus} alt="-"></img> <div>0</div> <img src={plus} alt="+"></img>
+    <button
+      className="quantity-button"
+      onClick={() =>
+        setQuantity((prev) => {
+          if (prev === 0) {
+            return 0;
+          }
+          return prev - 1;
+        })
+      }
+    >
+      <img src={minus} alt="-"></img>
+    </button>
+    <div>{quantity}</div>
+    <button
+      className="quantity-button"
+      onClick={() => setQuantity((prev) => prev + 1)}
+    >
+      <img src={plus} alt="+"></img>
+    </button>
   </div>
 );
 export default ItemQuantity;
