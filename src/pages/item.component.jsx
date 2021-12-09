@@ -12,12 +12,6 @@ import item4 from "../images/image-product-4.jpg";
 import cart from "../images/icon-cart.svg";
 
 const ItemPage = () => {
-  const [images, setImages] = useState([
-    { image: item1, description: "product", display: false },
-    { image: item2, description: "product", display: false },
-    { image: item3, description: "product", display: false },
-    { image: item4, description: "product", display: false },
-  ]);
   const itemDetails = {
     brand: "Sneaker Company",
     itemName: "Fall Limited Edition Sneakers",
@@ -38,7 +32,7 @@ const ItemPage = () => {
   const addToCart = () => {};
   return (
     <div className="itemPage">
-      <ImageHolder images={images} setImages={setImages} />
+      <ImageHolder itemImages={itemDetails.images} />
       <ItemDescription
         brand={itemDetails.brand}
         itemName={itemDetails.itemName}

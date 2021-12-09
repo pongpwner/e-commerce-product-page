@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./image-holder.styles.scss";
 import prev from "../../images/icon-previous.svg";
 import next from "../../images/icon-next.svg";
-const ImageHolder = ({ images, setImages }) => {
+const ImageHolder = ({ itemImages }) => {
   const [slideIndex, setSlideIndex] = useState(0);
+  const [images, setImages] = useState(itemImages);
   function showSlides(n) {
     setImages((prev) => {
       let temp = [...prev];
