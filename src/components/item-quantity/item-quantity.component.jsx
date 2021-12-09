@@ -18,7 +18,7 @@ const ItemQuantity = ({ quantity, setQuantity }) => (
     >
       <img src={minus} alt="-"></img>
     </button>
-    <div>{quantity}</div>
+    <div className="quantity">{quantity}</div>
     <button
       className="quantity-button"
       onClick={() => setQuantity((prev) => prev + 1)}

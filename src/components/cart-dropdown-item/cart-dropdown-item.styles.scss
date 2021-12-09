@@ -32,9 +32,11 @@
   .delete-button {
     background-color: white;
     border: none;
+    margin-top: 0;
+
     .delete {
-      width: 20px;
-      height: 75%;
+      width: 15px;
+      height: 50%;
     }
   }
 }
