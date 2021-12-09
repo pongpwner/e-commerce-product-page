@@ -22,9 +22,32 @@
     .group2 {
       width: 19%;
       justify-content: space-between;
+
       button {
         background-color: white;
         border: none;
+        .cart-icon {
+          position: relative;
+        }
+
+        .cart-quantity {
+          background-color: orange;
+          float: right;
+          position: absolute;
+          color: white;
+
+          font-size: 0.7rem;
+          border-radius: 10px;
+          height: 1rem;
+          z-index: 3;
+          width: 15px;
+          vertical-align: top;
+          margin-left: 1rem;
+          margin-top: -1.75rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
       }
     }
     .hamburger {

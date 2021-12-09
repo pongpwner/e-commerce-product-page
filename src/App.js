@@ -19,7 +19,7 @@ function App() {
   }, [cartItems]);
   return (
     <div className="App">
-      <Header toggleCart={toggleCart} />
+      <Header toggleCart={toggleCart} cartQuantity={cartQuantity} />
       <CartDropdown
         isActive={cartActive}
         cartItems={cartItems}
