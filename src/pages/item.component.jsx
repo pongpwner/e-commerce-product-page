@@ -18,12 +18,42 @@ const ItemPage = () => {
     { image: item3, description: "product", display: false },
     { image: item4, description: "product", display: false },
   ]);
+  const itemDetails = {
+    brand: "Sneaker Company",
+    itemName: "Fall Limited Edition Sneakers",
+    description:
+      "These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.",
+    price: "$125.00",
+    discount: "50%",
+    ogPrice: "$250.00",
+    images: [
+      { image: item1, description: "product", display: false },
+      { image: item2, description: "product", display: false },
+      { image: item3, description: "product", display: false },
+      { image: item4, description: "product", display: false },
+    ],
+  };
+  const [cartItems, setCartItems] = useState([]);
+
+  const addToCart = () => {};
   return (
     <div className="itemPage">
       <ImageHolder images={images} setImages={setImages} />
-      <ItemDescription />
+      <ItemDescription
+        brand={itemDetails.brand}
+        itemName={itemDetails.itemName}
+        description={itemDetails.description}
+        price={itemDetails.price}
+        discount={itemDetails.discount}
+        ogPrice={itemDetails.ogPrice}
+      />
       <ItemQuantity />
-      <CustomButton type="button" image={cart} label="Add To Cart" />
+      <CustomButton
+        type="button"
+        image={cart}
+        label="Add To Cart"
+        handleClick={addToCart}
+      />
     </div>
   );
 };
