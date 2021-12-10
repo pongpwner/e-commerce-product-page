@@ -55,23 +55,26 @@ const Header = ({ toggleCart, cartQuantity }) => {
         </span>
       </div>
       {hidden ? null : (
-        <ul className="mobile link-list">
-          <li>
-            <a href="./">Collections </a>
-          </li>
-          <li>
-            <a href="./">Men </a>
-          </li>
-          <li>
-            <a href="./">Women </a>
-          </li>
-          <li>
-            <a href="./">About </a>
-          </li>
-          <li>
-            <a href="./">Contact </a>
-          </li>
-        </ul>
+        <div className="mobile link-list-container">
+          <ul className="mobile link-list">
+            <li>
+              <a href="./">Collections </a>
+            </li>
+            <li>
+              <a href="./">Men </a>
+            </li>
+            <li>
+              <a href="./">Women </a>
+            </li>
+            <li>
+              <a href="./">About </a>
+            </li>
+            <li>
+              <a href="./">Contact </a>
+            </li>
+          </ul>
+          <div className="blackout"></div>
+        </div>
       )}
     </header>
   );
