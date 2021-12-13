@@ -14,32 +14,36 @@ const Header = ({ toggleCart, cartQuantity }) => {
     <header className="header">
       <div className="header-content">
         <span className="header-group">
-          <div className="hamburger header-item" onClick={toggleHidden}>
+          <div className="hamburger header-item mobile" onClick={toggleHidden}>
             <span className="line"></span>
             <span className="line"></span>
             <span className="line"></span>
           </div>
 
-          <img src={logo} alt="Sneakers" className="icon header-item"></img>
+          <img
+            src={logo}
+            alt="Sneakers"
+            className="icon header-item logo"
+          ></img>
+          <ul className="desktop link-list">
+            <li>
+              <a href="./">Collections </a>
+            </li>
+            <li>
+              <a href="./">Men </a>
+            </li>
+            <li>
+              <a href="./">Women </a>
+            </li>
+            <li>
+              <a href="./">About </a>
+            </li>
+            <li>
+              <a href="./">Contact </a>
+            </li>
+          </ul>
         </span>
 
-        <ul className="desktop link-list">
-          <li>
-            <a href="./">Collections </a>
-          </li>
-          <li>
-            <a href="./">Men </a>
-          </li>
-          <li>
-            <a href="./">Women </a>
-          </li>
-          <li>
-            <a href="./">About </a>
-          </li>
-          <li>
-            <a href="./">Contact </a>
-          </li>
-        </ul>
         <span className="header-group group2">
           <button type="button" onClick={toggleCart}>
             <img
@@ -51,7 +55,11 @@ const Header = ({ toggleCart, cartQuantity }) => {
               <div className="cart-quantity">{cartQuantity}</div>
             ) : null}
           </button>
-          <img src={avatar} alt="avatar" className="icon header-item"></img>
+          <img
+            src={avatar}
+            alt="avatar"
+            className="icon header-item avatar"
+          ></img>
         </span>
       </div>
       {hidden ? null : (

@@ -49,16 +49,28 @@ const ImageHolder = ({ itemImages }) => {
           alt={image.description}
         ></img>
       ))}
+      <div className="slideshow">
+        {images.map((image) => (
+          <img
+            src={image.image}
+            className={`navigation-image desktop ${
+              image.display ? "current-active" : ""
+            }`}
+            onClick={() => currentSlide(image.id)}
+            alt="item"
+          ></img>
+        ))}
+      </div>
       <button
         type="button"
-        className="mobile prev"
+        className="mobile prev "
         onClick={() => plusSlides(-1)}
       >
         <img src={prev} alt="previous product button"></img>
       </button>
       <button
         type="button"
-        className="moblile next"
+        className="mobile next"
         onClick={() => plusSlides(1)}
       >
         <img src={next} alt="next product button"></img>

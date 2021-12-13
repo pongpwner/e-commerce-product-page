@@ -30,10 +30,10 @@ const ItemPage = ({
     discount: "50%",
     ogPrice: "$250.00",
     images: [
-      { image: item1, description: "product", display: false },
-      { image: item2, description: "product", display: false },
-      { image: item3, description: "product", display: false },
-      { image: item4, description: "product", display: false },
+      { image: item1, description: "product", display: false, id: 0 },
+      { image: item2, description: "product", display: false, id: 1 },
+      { image: item3, description: "product", display: false, id: 2 },
+      { image: item4, description: "product", display: false, id: 3 },
     ],
   };
 
@@ -49,23 +49,25 @@ const ItemPage = ({
     setCartQuantity((prev) => prev + quantity);
   };
   return (
-    <div className="itemPage">
+    <div className="item-page">
       <ImageHolder itemImages={itemDetails.images} />
-      <ItemDescription
-        brand={itemDetails.brand}
-        itemName={itemDetails.itemName}
-        description={itemDetails.description}
-        price={itemDetails.price}
-        discount={itemDetails.discount}
-        ogPrice={itemDetails.ogPrice}
-      />
-      <ItemQuantity quantity={quantity} setQuantity={setQuantity} />
-      <CustomButton
-        type="button"
-        image={cart}
-        label="Add To Cart"
-        handleClick={() => addToCart(itemDetails)}
-      />
+      <section className="item-info ">
+        <ItemDescription
+          brand={itemDetails.brand}
+          itemName={itemDetails.itemName}
+          description={itemDetails.description}
+          price={itemDetails.price}
+          discount={itemDetails.discount}
+          ogPrice={itemDetails.ogPrice}
+        />
+        <ItemQuantity quantity={quantity} setQuantity={setQuantity} />
+        <CustomButton
+          type="button"
+          image={cart}
+          label="Add To Cart"
+          handleClick={() => addToCart(itemDetails)}
+        />
+      </section>
     </div>
   );
 };
