@@ -44,12 +44,13 @@
       border-radius: 10px;
       background-color: gray;
       &:hover {
-        border: 3px solid orange;
+        border: 3px solid hsl(26, 100%, 55%);
         opacity: 50%;
+        cursor: pointer;
       }
     }
     .current-active {
-      border: 3px solid orange;
+      border: 3px solid hsl(26, 100%, 55%);
       opacity: 50%;
     }
   }
@@ -63,6 +64,9 @@
     .product-image {
       width: 100%;
       border-radius: 10px;
+      &:hover {
+        cursor: pointer;
+      }
     }
     .lightbox-active {
       display: flex;
@@ -70,10 +74,24 @@
     .prev {
       left: 39%;
       top: 50%;
+
+      &:hover {
+        img {
+          filter: invert(57%) sepia(53%) saturate(2251%) hue-rotate(345deg)
+            brightness(99%) contrast(104%);
+        }
+      }
     }
     .next {
       right: 39%;
       top: 50%;
+
+      &:hover {
+        img {
+          filter: invert(57%) sepia(53%) saturate(2251%) hue-rotate(345deg)
+            brightness(99%) contrast(104%);
+        }
+      }
     }
   }
 }

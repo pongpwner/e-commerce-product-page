@@ -128,7 +128,7 @@
 @media screen and (min-width: 800px) {
   .header {
     height: 5rem;
-    border-bottom: solid hsl(223, 64%, 98%) 1px;
+    border-bottom: solid hsl(223, 64%, 98%) 2px;
     width: 60vw;
 
     .header-content {
@@ -172,12 +172,16 @@
       }
       .cart-icon {
         height: 20px;
+        &:hover {
+          cursor: pointer;
+        }
       }
       .avatar {
         height: 50px;
         border-radius: 50%;
         &:hover {
-          border: 1px solid orange;
+          border: 3px solid orange;
+          cursor: pointer;
         }
       }
       .group2 {

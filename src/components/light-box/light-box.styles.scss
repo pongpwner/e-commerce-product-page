@@ -18,8 +18,9 @@
     border: none;
     align-self: flex-end;
     &:hover {
-      filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg)
-        saturate(600%) contrast(0.8);
+      filter: invert(57%) sepia(53%) saturate(2251%) hue-rotate(345deg)
+        brightness(99%) contrast(104%);
+      cursor: pointer;
     }
   }
   &.active {

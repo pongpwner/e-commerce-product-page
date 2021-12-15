@@ -14,5 +14,8 @@
   .quantity-button {
     background-color: hsl(223, 64%, 98%);
     border: none;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }

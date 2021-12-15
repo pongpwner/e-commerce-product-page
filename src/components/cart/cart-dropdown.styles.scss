@@ -50,5 +50,10 @@
     top: 5rem;
     right: 15%;
     filter: drop-shadow(2mm 4mm 3mm lightgray);
+    .delete-button {
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
 }

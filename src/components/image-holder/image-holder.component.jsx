@@ -42,14 +42,27 @@ const ImageHolder = ({ itemImages, setActive, lightbox }) => {
   // }, []);
   return (
     <div className="image-holder">
-      {images.map((image) => (
-        <img
-          className={`product-image ${image.display ? "active" : ""} `}
-          src={image.image}
-          alt={image.description}
-          onClick={() => setActive(true)}
-        ></img>
-      ))}
+      <span className="desktop">
+        {images.map((image) => (
+          <img
+            className={`product-image desktop ${
+              image.display ? "active" : ""
+            } `}
+            src={image.image}
+            alt={image.description}
+            onClick={() => setActive(true)}
+          ></img>
+        ))}
+      </span>
+      <span className="mobile">
+        {images.map((image) => (
+          <img
+            className={`product-image  ${image.display ? "active" : ""} `}
+            src={image.image}
+            alt={image.description}
+          ></img>
+        ))}
+      </span>
       <div className="slideshow">
         {images.map((image) => (
           <img
