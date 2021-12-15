@@ -43,3 +43,12 @@
     }
   }
 }
+
+@media screen and (min-width: 800px) {
+  .cart-dropdown {
+    width: 20vw;
+    top: 5rem;
+    right: 15%;
+    filter: drop-shadow(2mm 4mm 3mm lightgray);
+  }
+}

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./image-holder.styles.scss";
 import prev from "../../images/icon-previous.svg";
 import next from "../../images/icon-next.svg";
-const ImageHolder = ({ itemImages }) => {
+const ImageHolder = ({ itemImages, setActive, lightbox }) => {
   const [slideIndex, setSlideIndex] = useState(0);
   const [images, setImages] = useState(itemImages);
   function showSlides(n) {
@@ -47,6 +47,7 @@ const ImageHolder = ({ itemImages }) => {
           className={`product-image ${image.display ? "active" : ""} `}
           src={image.image}
           alt={image.description}
+          onClick={() => setActive(true)}
         ></img>
       ))}
       <div className="slideshow">
@@ -63,14 +64,14 @@ const ImageHolder = ({ itemImages }) => {
       </div>
       <button
         type="button"
-        className="mobile prev "
+        className={`mobile prev ${lightbox ? "lightbox-active" : ""}`}
         onClick={() => plusSlides(-1)}
       >
         <img src={prev} alt="previous product button"></img>
       </button>
       <button
         type="button"
-        className="mobile next"
+        className={`mobile next ${lightbox ? "lightbox-active" : ""}`}
         onClick={() => plusSlides(1)}
       >
         <img src={next} alt="next product button"></img>

@@ -12,11 +12,20 @@
     background-color: hsl(25, 100%, 94%);
     padding: 2%;
     font-weight: 700;
+    border-radius: 10px;
   }
   .og-price {
     display: flex;
     color: hsl(220, 14%, 75%);
     align-items: center;
     text-decoration: line-through;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .item-price {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
   }
 }

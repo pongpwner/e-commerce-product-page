@@ -29,3 +29,20 @@
     color: hsl(219, 9%, 45%);
   }
 }
+
+@media screen and (min-width: 800px) {
+  .item-description {
+    margin-top: 10%;
+
+    .item-brand {
+      margin: 1rem 0;
+      font-size: 0.8rem;
+    }
+    .item-name {
+      margin-bottom: 1.5rem;
+    }
+    .description {
+      margin: 1rem 0;
+    }
+  }
+}

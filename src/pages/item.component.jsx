@@ -11,6 +11,7 @@ import item3 from "../images/image-product-3.jpg";
 import item4 from "../images/image-product-4.jpg";
 import cart from "../images/icon-cart.svg";
 import CartDropdown from "../components/cart/cart-dropdown.component";
+import LightBox from "../components/light-box/light-box.component";
 
 const ItemPage = ({
   cartItems,
@@ -36,7 +37,7 @@ const ItemPage = ({
       { image: item4, description: "product", display: false, id: 3 },
     ],
   };
-
+  const [active, setActive] = useState(false);
   const addToCart = (item) => {
     // if(cartItems.find(item.id)){
     //   setCartItems((prev) => {
@@ -50,7 +51,13 @@ const ItemPage = ({
   };
   return (
     <div className="item-page">
-      <ImageHolder itemImages={itemDetails.images} />
+      <LightBox
+        active={active}
+        setActive={setActive}
+        itemImages={itemDetails.images}
+      />
+      <ImageHolder setActive={setActive} itemImages={itemDetails.images} />
+
       <section className="item-info ">
         <ItemDescription
           brand={itemDetails.brand}
@@ -60,13 +67,15 @@ const ItemPage = ({
           discount={itemDetails.discount}
           ogPrice={itemDetails.ogPrice}
         />
-        <ItemQuantity quantity={quantity} setQuantity={setQuantity} />
-        <CustomButton
-          type="button"
-          image={cart}
-          label="Add To Cart"
-          handleClick={() => addToCart(itemDetails)}
-        />
+        <span className="cart-quantity">
+          <ItemQuantity quantity={quantity} setQuantity={setQuantity} />
+          <CustomButton
+            type="button"
+            image={cart}
+            label="Add To Cart"
+            handleClick={() => addToCart(itemDetails)}
+          />
+        </span>
       </section>
     </div>
   );

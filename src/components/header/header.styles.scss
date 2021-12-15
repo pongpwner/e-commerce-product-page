@@ -128,6 +128,8 @@
 @media screen and (min-width: 800px) {
   .header {
     height: 5rem;
+    border-bottom: solid hsl(223, 64%, 98%) 1px;
+    width: 60vw;
 
     .header-content {
       padding: 0;
@@ -142,7 +144,7 @@
           display: none;
         }
         .logo {
-          margin: 0 0 0 6rem;
+          margin: 0 0 0 0;
         }
         .link-list {
           padding: 0;
@@ -150,13 +152,23 @@
           justify-content: space-between;
           width: 80%;
           align-items: center;
-          a {
-            color: black;
+          li {
+            padding: 1.8rem 0;
+
+            a {
+              color: hsl(220, 14%, 75%);
+              padding: 1.8rem 0;
+              &:hover {
+                color: black;
+                border-bottom: solid 3px orange;
+              }
+            }
           }
         }
       }
       .icon {
         height: 30px;
+        margin: 0;
       }
       .cart-icon {
         height: 20px;
@@ -169,8 +181,8 @@
         }
       }
       .group2 {
-        gap: 2rem;
-        width: 15%;
+        justify-content: space-between;
+        width: 13%;
       }
     }
   }

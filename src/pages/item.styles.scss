@@ -1,10 +1,20 @@
 @media screen and (min-width: 800px) {
   .item-page {
-    margin-top: 6rem;
+    margin-top: 20vh;
     display: flex;
     gap: 7rem;
     .item-info {
       width: 20vw;
+    }
+    .cart-quantity {
+      display: flex;
+      align-items: center;
+      .custom-button {
+        font-size: 1rem;
+        padding: 0;
+        margin: 0;
+        height: 3rem;
+      }
     }
   }
 }

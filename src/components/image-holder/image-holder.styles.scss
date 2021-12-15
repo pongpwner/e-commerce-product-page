@@ -40,16 +40,16 @@
     margin-top: 2rem;
 
     .navigation-image {
-      width: 80px;
+      width: 22%;
       border-radius: 10px;
       background-color: gray;
       &:hover {
-        border: 1px solid orange;
+        border: 3px solid orange;
         opacity: 50%;
       }
     }
     .current-active {
-      border: 1px solid orange;
+      border: 3px solid orange;
       opacity: 50%;
     }
   }
@@ -59,9 +59,21 @@
   .image-holder {
     width: 20vw;
     border-radius: 10px;
+    margin: 0;
     .product-image {
       width: 100%;
       border-radius: 10px;
+    }
+    .lightbox-active {
+      display: flex;
+    }
+    .prev {
+      left: 39%;
+      top: 50%;
+    }
+    .next {
+      right: 39%;
+      top: 50%;
     }
   }
 }
