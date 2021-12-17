@@ -8,7 +8,7 @@
   .header-content {
     width: 100%;
     height: 100%;
-    padding: 3% 0;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,8 +21,6 @@
       }
 
       .header-item {
-        padding: 1%;
-        margin: 0 1%;
       }
     }
     .group2 {
@@ -61,6 +59,8 @@
       width: 20px;
       justify-content: space-between;
       height: 20px;
+      margin: 0;
+      padding: 0;
       .line {
         background-color: black;
         width: 20px;
@@ -140,12 +140,16 @@
 @media screen and (min-width: 800px) {
   .header {
     height: 5rem;
-    border-bottom: solid hsl(223, 64%, 98%) 2px;
-    min-width: 740px;
-    width: 75vw;
+
+    width: 100vw;
+    display: flex;
+    justify-content: center;
 
     .header-content {
       padding: 0;
+      border-bottom: solid hsl(223, 64%, 98%) 2px;
+      min-width: 740px;
+      width: 75vw;
       .desktop {
         display: flex;
       }
@@ -165,6 +169,7 @@
           justify-content: space-between;
           width: 80%;
           align-items: center;
+          gap: 1rem;
           li {
             padding: 1.8rem 0;
 
@@ -193,14 +198,16 @@
         height: 50px;
         width: 50px;
         border-radius: 50%;
+
         &:hover {
           border: 3px solid orange;
           cursor: pointer;
         }
       }
       .group2 {
-        justify-content: space-between;
+        justify-content: flex-end;
         width: 13%;
+        gap: 2rem;
       }
     }
   }
