@@ -64,7 +64,7 @@ const Header = ({ toggleCart, cartQuantity }) => {
         </span>
       </div>
       {hidden ? null : (
-        <div className="mobile link-list-container">
+        <nav className="mobile link-list-container">
           <ul className="mobile link-list">
             <li>
               <button
@@ -92,7 +92,7 @@ const Header = ({ toggleCart, cartQuantity }) => {
             </li>
           </ul>
           <div className="blackout"></div>
-        </div>
+        </nav>
       )}
     </header>
   );

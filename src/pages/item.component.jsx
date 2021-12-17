@@ -50,7 +50,7 @@ const ItemPage = ({
     setCartQuantity((prev) => prev + quantity);
   };
   return (
-    <div className="item-page">
+    <main className="item-page">
       <LightBox
         active={active}
         setActive={setActive}
@@ -77,7 +77,7 @@ const ItemPage = ({
           />
         </div>
       </section>
-    </div>
+    </main>
   );
 };
 export default ItemPage;
