@@ -3,7 +3,7 @@
   position: fixed;
   width: 100vw;
   background-color: white;
-  height: 3rem;
+  height: 4rem;
   z-index: 10;
   .header-content {
     width: 100%;
@@ -11,6 +11,7 @@
     padding: 3% 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     .header-group {
       display: flex;
       margin: 0 1rem;
@@ -59,6 +60,7 @@
       flex-direction: column;
       width: 20px;
       justify-content: space-between;
+      height: 20px;
       .line {
         background-color: black;
         width: 20px;
@@ -68,6 +70,10 @@
     .icon {
       height: 20px;
       margin: 0 4%;
+    }
+    .avatar {
+      width: 30px;
+      height: 30px;
     }
     ul {
       list-style-type: none;
@@ -129,6 +135,7 @@
   .header {
     height: 5rem;
     border-bottom: solid hsl(223, 64%, 98%) 2px;
+    min-width: 740px;
     width: 60vw;
 
     .header-content {
@@ -178,6 +185,7 @@
       }
       .avatar {
         height: 50px;
+        width: 50px;
         border-radius: 50%;
         &:hover {
           border: 3px solid orange;

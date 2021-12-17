@@ -42,7 +42,7 @@ const ImageHolder = ({ itemImages, setActive, lightbox }) => {
   // }, []);
   return (
     <div className="image-holder">
-      <span className="desktop">
+      <span className="carousel-holder desktop">
         {images.map((image) => (
           <img
             className={`product-image desktop ${
@@ -54,7 +54,7 @@ const ImageHolder = ({ itemImages, setActive, lightbox }) => {
           ></img>
         ))}
       </span>
-      <span className="mobile">
+      <span className=" carousel-holder mobile">
         {images.map((image) => (
           <img
             className={`product-image  ${image.display ? "active" : ""} `}

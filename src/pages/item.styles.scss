@@ -4,6 +4,7 @@
     display: flex;
     gap: 7rem;
     .item-info {
+      min-width: 40ch;
       width: 20vw;
     }
     .cart-quantity {
