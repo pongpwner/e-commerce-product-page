@@ -5,7 +5,8 @@
     gap: 7rem;
     .item-info {
       min-width: 40ch;
-      width: 20vw;
+      width: 40vw;
+      max-width: 55ch;
     }
     .cart-quantity {
       display: flex;

@@ -10,6 +10,20 @@
   .content {
     display: flex;
     flex-direction: column;
+    width: 30vw;
+    .image-holder {
+      width: 100%;
+      .carousel-holder.desktop {
+        overflow: unset;
+        height: unset;
+        display: flex;
+        justify-content: center;
+      }
+      .product-image {
+        width: 30vw;
+        height: 100%;
+      }
+    }
   }
   .close-button {
     height: 50px;
