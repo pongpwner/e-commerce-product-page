@@ -3,6 +3,7 @@ import "./header.styles.scss";
 import logo from "../../images/logo.svg";
 import cart from "../../images/icon-cart.svg";
 import avatar from "../../images/image-avatar.png";
+import close from "../../images/icon-close.svg";
 
 const Header = ({ toggleCart, cartQuantity }) => {
   const [hidden, setHidden] = useState(true);
@@ -65,6 +66,15 @@ const Header = ({ toggleCart, cartQuantity }) => {
       {hidden ? null : (
         <div className="mobile link-list-container">
           <ul className="mobile link-list">
+            <li>
+              <button
+                type="button"
+                className="close-mobile-nav-button"
+                onClick={toggleHidden}
+              >
+                <img src={close} alt="X"></img>
+              </button>
+            </li>
             <li>
               <a href="./">Collections </a>
             </li>
