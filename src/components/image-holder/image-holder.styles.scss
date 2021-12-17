@@ -59,13 +59,13 @@
       background-color: gray;
       &:hover {
         border: 3px solid hsl(26, 100%, 55%);
-        opacity: 50%;
+        opacity: 0.5;
         cursor: pointer;
       }
     }
     .current-active {
       border: 3px solid hsl(26, 100%, 55%);
-      opacity: 50%;
+      opacity: 0.5;
     }
   }
 }
