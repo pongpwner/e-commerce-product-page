@@ -14,7 +14,7 @@ const Header = ({ toggleCart, cartQuantity }) => {
   return (
     <header className="header">
       <div className="header-content">
-        <span className="header-group">
+        <div className="header-group">
           <div className="hamburger header-item mobile" onClick={toggleHidden}>
             <span className="line"></span>
             <span className="line"></span>
@@ -43,7 +43,7 @@ const Header = ({ toggleCart, cartQuantity }) => {
               <a href="./">Contact </a>
             </li>
           </ul>
-        </span>
+        </div>
 
         <span className="header-group group2">
           <button type="button" onClick={toggleCart}>

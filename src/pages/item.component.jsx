@@ -67,7 +67,7 @@ const ItemPage = ({
           discount={itemDetails.discount}
           ogPrice={itemDetails.ogPrice}
         />
-        <span className="cart-quantity">
+        <div className="cart-quantity">
           <ItemQuantity quantity={quantity} setQuantity={setQuantity} />
           <CustomButton
             type="button"
@@ -75,7 +75,7 @@ const ItemPage = ({
             label="Add To Cart"
             handleClick={() => addToCart(itemDetails)}
           />
-        </span>
+        </div>
       </section>
     </div>
   );
