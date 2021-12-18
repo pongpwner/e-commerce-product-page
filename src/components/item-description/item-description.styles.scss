@@ -27,7 +27,7 @@
     padding: 0;
     text-align: start;
     color: hsl(219, 9%, 45%);
-    line-height: 1.6rem;
+    line-height: 1.8rem;
   }
 }
 
@@ -37,10 +37,12 @@
 
     .item-brand {
       margin: 2rem 0;
-      font-size: 0.8rem;
+      font-size: 1.2rem;
     }
     .item-name {
+      font-size: 3rem;
       margin-bottom: 1.5rem;
+      line-height: 1.2;
     }
     .description {
       margin: 1rem 0;

@@ -11,12 +11,12 @@ const ItemDescription = ({
   ogPrice,
 }) => {
   return (
-    <div className="item-description">
+    <section className="item-description">
       <h1 className="item-brand">{brand}</h1>
       <h2 className="item-name">{itemName}</h2>
-      <section className="description">{description}</section>
+      <div className="description">{description}</div>
       <ItemPrice price={price} discount={discount} ogPrice={ogPrice} />
-    </div>
+    </section>
   );
 };
 

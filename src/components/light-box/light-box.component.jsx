@@ -6,7 +6,7 @@ import close from "../../images/icon-close.svg";
 const LightBox = ({ active, setActive, itemImages }) => {
   return (
     <div className={`light-box desktop ${active ? "active" : ""}`}>
-      <span className="content">
+      <div className="content">
         <button
           type="button"
           className="close-button"
@@ -20,7 +20,7 @@ const LightBox = ({ active, setActive, itemImages }) => {
           itemImages={itemImages}
           lightbox
         />
-      </span>
+      </div>
     </div>
   );
 };

@@ -36,13 +36,13 @@ function App() {
         setQuantity={setQuantity}
       />
 
-      <div class="attribution">
+      <footer class="attribution">
         Challenge by{" "}
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
           Frontend Mentor
         </a>
         . Coded by <a href="#">Eric Shyu</a>.
-      </div>
+      </footer>
     </div>
   );
 }
