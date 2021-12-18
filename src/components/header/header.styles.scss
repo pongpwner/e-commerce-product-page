@@ -170,6 +170,9 @@
           width: 80%;
           align-items: center;
           gap: 2rem;
+          @media screen and (max-width: 1000px) {
+            gap: 1rem;
+          }
           li {
             padding: 1.8rem 0;
 
